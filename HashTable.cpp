@@ -22,7 +22,7 @@ size_t simpleHash (const string& key, size_t size) {
     return demoHash(key) % size; 
 }
 
-// Stores a user's username and passwrd information.
+// Stores a user's username and password information.
 struct User {
     string username; 
     string salt; 
@@ -257,7 +257,7 @@ class HashTable {
     public: 
         HashTable(size_t size = 0) {
 
-            // Makes sure the table has at least one bucket.
+            // Make sure the table has at least one bucket.
             if (size == 0) {
                 size = 1; 
             }
@@ -342,7 +342,7 @@ class HashTable {
         }
 };
 
-// Checks whether the entered password matches the stored password hash.
+// Check whether the entered password matches the stored password hash.
 bool login (HashTable& users, 
             const string& username, 
             const string& password) {
@@ -355,7 +355,7 @@ bool login (HashTable& users,
                 return false; 
             }
 
-            // Hashes the entered password with the user's salt and the pepper.
+            // Hashes the entered password with the user's salt and pepper.
             uint64_t calculatedHash = demoHash(user->salt + password + PEPPER);
 
             // Compares the calculated hash with the stored password hash.
