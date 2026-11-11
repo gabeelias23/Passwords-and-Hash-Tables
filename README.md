@@ -25,8 +25,4 @@ HashTable.exe
 
 On Mac/Linux:
 
-
-
-On Mac/Linux:
-
 ./HashTable
